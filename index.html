@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #2fb4af;
+        display: flex;
+        /* * {
+          border: 3px solid black;
+        } */
+        .flex {
+          display: flex;
+        }
+        .baise {
+          background-color: white;
+        }
+        .lanse {
+          background-color: aqua;
+        }
+        .flex1 {
+          flex: 1;
+        }
+        .column {
+          flex-direction: column;
+        }
+        .row {
+          flex-direction: row;
+        }
+        .mg8 {
+          /* 左右上下侧边距离是8px */
+          margin: 8px;
+        }
+        .mgr8 {
+          /* 右边距8px */
+          margin-right: 8px;
+        }
+        .button1 {
+          display: flex;
+          justify-content: center; /* 水平居中 */
+          align-items: center; /* 垂直居中 */
+          height: 200px; /* 可以根据需要设置容器高度 */
+          border: 1px solid #000; /* 可选：添加边框以便观察容器的位置 */
+          height: 50px;
+          margin-top: 5px;
+          background-color: aquamarine;
+          margin-bottom: 5px;
+          border-radius: 8px; /* 边框圆角 */
+          box-shadow: 5px 5px 5px rgba(214, 30, 30, 0.1); /* 阴影效果 */
+        }
+
+        .juzhong {
+          display: flex;
+          justify-content: center; /* 水平居中 */
+          align-items: center; /* 垂直居中 */
+          font-weight: bold; /* 加粗 */
+          border-radius: 8px; /* 边框圆角 */
+          box-shadow: 5px 5px 5px rgba(214, 30, 30, 0.1); /* 阴影效果 */
+        }
+        .wenzishupai {
+          display: inline-block;
+          writing-mode: vertical-lr; /* 从上到下排列 */
+          text-orientation: upright; /* 文本正向显示 */
+          font-weight: bold; /* 加粗 */
+        }
+        .button {
+          height: 20px;
+          width: 20px;
+          padding: 10px 20px; /* 按钮内边距 */
+          background-color: #125480; /* 背景色 */
+          color: #c31b1b; /* 文本颜色 */
+          border: none; /* 边框 */
+          border-radius: 5px; /* 圆角 */
+          cursor: pointer; /* 鼠标指针样式 */
+        }
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 200px; height: 100vh" class="baise mg8">
+      <div style="height: 50px; margin-bottom: 50px" class="lanse">
+        <div class="juzhong">
+          <img
+            src="E:\Apicture\R-C.jpg"
+            alt="a chiken"
+            width="50px "
+            height="50px"
+          />
+        </div>
+        <div class="juzhong"><p>苗大帅</p></div>
+
+        <div class="button1">第一页</div>
+        <div class="button1">第二页</div>
+        <div class="button1">第三页</div>
+        <div class="button1">第四页</div>
+        <div class="button1">第五页</div>
+        <div class="button1">第六页</div>
+        <button class="button" id="dzs" onclick="dianzan()">aaa</button>
+        <script>
+          function dianzan() {
+            let dianzanshubiaoqian = window.document.getElementById("dzs");
+            let dianzanshu = parseInt(dianzanshubiaoqian.innerText);
+            let xinshuzi = dianzanshu + 1;
+            dianzanshubiaoqian.innerText = xinshuzi;
+          }
+        </script>
+      </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex1">
+      <!-- 头部栏 -->
+      <div style="height: 12vh" class="baise mg8">
+        <h2 style="display: flex; justify-content: center">下面是帅哥的网站</h2>
+        <h4 style="display: flex; justify-content: center">
+          (本网站还在开发中，若有不足请及时指正)
+        </h4>
+      </div>
+      <!-- 内容区 -->
+      <div class="flex1 flex">
+        <!-- 左区 -->
+        <div style="flex: 1">
+          <!-- 左一 -->
+          <div style="height: 40vh" class="baise mg8 juzhong">
+            <p class="wenzishupai">第一部分：广告位</p>
+          </div>
+          <!-- 左二 -->
+          <div style="height: 25vh" class="baise mg8 juzhong">
+            <p class="wenzishupai">第二部分：广告位</p>
+          </div>
+          <!-- 左三 -->
+          <div style="height: 10vh" class="baise mg8 juzhong">
+            <p style="word-break: break-all">第三部分广告位</p>
+          </div>
+        </div>
+
+        <!-- 右区 -->
+        <div style="flex: 3">
+          <!-- 右一 分成四个长条子 -->
+          <div style="height: 450px">
+            <div style="height: 100px" class="baise mg8 juzhong">
+              <p>苗大帅的真实姓名是苗洪涛</p>
+            </div>
+            <div style="height: 100px" class="baise mg8 juzhong">
+              <p>家庭住址：中华人民共和国河北省唐山市</p>
+            </div>
+            <div style="height: 100px" class="baise mg8 juzhong">
+              <p>个人简介</p>
+              <p>
+                本人大学本科，机械工程专业，平时对高级制造感兴趣，偶尔也喜欢写写代码。喜欢尝试一些自己从未做过的事情。热情好客，热爱祖国思想端正。
+              </p>
+            </div>
+            <div style="height: 100px" class="baise mg8 juzhong">
+              <p>择偶标准：我喜欢的</p>
+            </div>
+          </div>
+          <!-- 右二 四个竖着的短条子 -->
+          <div style="height: 150px" class="flex row">
+            <div style="height: 100px; width: 55px" class="baise mg8"></div>
+            <div style="height: 100px; width: 60px" class="baise mg8"></div>
+            <div style="height: 100px; width: 70px" class="baise mg8"></div>
+            <div style="height: 100px; width: 80px" class="baise mg8"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
